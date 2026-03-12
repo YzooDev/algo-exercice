@@ -1,11 +1,12 @@
 <?php
     function addition($num1, $num2){
         //Code de la fonction
-        $resultat = $num1 + $num2;
-        return $resultat;
+        $result = $num1 + $num2;
+        return $result;
     };
 
-    echo "<p>Le Résultat de 2 + 5 est de : {$addition(2, 5)}</p>";
+    $resultAdd = addition(2, 5);
+    echo "<p>Le Résultat de 2 + 5 est de : {$resultAdd}</p>";
 
     $counter = 10;
     while($counter > 0){
@@ -16,12 +17,10 @@
     $myTab = ["Jeff","Mathieu","Yann","Yoann"];
 
     function displayTab($tab){
-        for ($i=0; $i < sizeof($tab); $i++) { 
-            $index_pair = 0;
-            if (fmod($i, 2) = 0) {
-                $index_pair = $i;
-            }
-            echo {$tab[i]}. "à l'index pair : $i <br>";
+        for ($i=0; $i < sizeof($tab); $i++) {
+            if (fmod($i, 2) == 0) {
+                echo $tab[$i]."  à l'index pair : $i";
+            }   
         }
     };
 
